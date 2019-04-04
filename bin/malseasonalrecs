@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/mal_seasonal_recs'
+
+MalSeasonalRecs::CLI.new.call

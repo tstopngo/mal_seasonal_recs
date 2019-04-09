@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/mal_seasonal_recs'
+require "bundler/setup"
+require "environment"
 
+#MalSeasonalRecs::Scraper.scrape_page("https://myanimelist.net/anime/season")
 MalSeasonalRecs::CLI.new.call

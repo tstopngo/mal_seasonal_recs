@@ -6,10 +6,11 @@ class MalSeasonalRecs::Scraper
     anime_array = []
     season_page.css(".seasonal-anime.js-seasonal-anime").each do |anime|
 
-      anime_hash = { :title => anime.css("p.title-text a.link-title").text.chomp,
-                     :episodes => anime.css("div.eps a span").text.chomp,
-                     :viewers => anime.css("span.member.fl-r").text.chomp,
-                     :rating => anime.css("span.score").text.chomp
+      anime_hash = { :title => anime.css("p.title-text a.link-title").text.strip,
+                     :episodes => anime.css("div.eps a span").text.strip,
+                     :viewers => anime.css("span.member.fl-r").text.strip,
+                     :rating => anime.css("span.score").text.strip.to_f.round(1),
+                     :summary => anime.css("span.preline").text.strip
                    }
       anime_array << anime_hash
       end

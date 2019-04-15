@@ -1,5 +1,5 @@
 class MalSeasonalRecs::Anime
-  attr_accessor :title, :episodes, :viewers, :rating
+  attr_accessor :title, :episodes, :viewers, :rating, :summary
 
   @@all = []
 
